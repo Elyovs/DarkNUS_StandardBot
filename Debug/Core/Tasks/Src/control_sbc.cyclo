@@ -1,0 +1,9 @@
+control_sbc.c:42:6:sbc_control_input	4
+control_sbc.c:70:6:aimbot_pid_init	1
+control_sbc.c:86:6:sbc_gimbal_control_input	10
+control_sbc.c:125:6:sbc_gimbal_process_yolo	3
+control_sbc.c:147:6:sbc_gimbal_process_norm	6
+control_sbc.c:185:6:sbc_gimbal_process_set_ang	3
+control_sbc.c:197:6:sbc_gimbal_process_turn_ang	3
+control_sbc.c:212:6:sbc_chassis_control_input	10
+control_sbc.c:274:6:sbc_launcher_control_input	21

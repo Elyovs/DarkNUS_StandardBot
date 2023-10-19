@@ -1,0 +1,2 @@
+bsp_gpio.c:10:6:laser_on	1
+bsp_gpio.c:15:6:laser_off	1

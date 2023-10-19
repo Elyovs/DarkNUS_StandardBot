@@ -1,0 +1,3 @@
+../Core/Tasks/Src/gimbal_control_task.c:30:6:gimbal_control_task	3
+../Core/Tasks/Src/gimbal_control_task.c:64:6:gimbal_control	9
+../Core/Tasks/Src/gimbal_control_task.c:124:6:gimbal_angle_control	5

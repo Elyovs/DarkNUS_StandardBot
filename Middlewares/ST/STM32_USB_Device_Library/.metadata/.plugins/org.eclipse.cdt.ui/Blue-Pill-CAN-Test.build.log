@@ -1,0 +1,10 @@
+20:44:23 **** Incremental Build of configuration Debug for project Blue-Pill-CAN-Test ****
+make -j16 all 
+arm-none-eabi-size   Blue-Pill-CAN-Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9640	     20	   1772	  11432	   2ca8	Blue-Pill-CAN-Test.elf
+Finished building: default.size.stdout
+ 
+
+20:44:23 Build Finished. 0 errors, 0 warnings. (took 213ms)
+

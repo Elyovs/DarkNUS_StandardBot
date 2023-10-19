@@ -1,0 +1,9 @@
+../Core/Tasks/Src/imu_processing_task.c:37:6:imu_proc_task_notif	2
+../Core/Tasks/Src/imu_processing_task.c:46:6:gyro_data_ready	3
+../Core/Tasks/Src/imu_processing_task.c:64:6:accel_data_ready	3
+../Core/Tasks/Src/imu_processing_task.c:83:6:mag_data_ready	1
+../Core/Tasks/Src/imu_processing_task.c:96:6:imu_processing_task	1
+../Core/Tasks/Src/imu_processing_task.c:106:6:init_quaternion	13
+../Core/Tasks/Src/imu_processing_task.c:241:6:quat_startup	1
+../Core/Tasks/Src/imu_processing_task.c:282:6:imu_ahrs_update	4
+../Core/Tasks/Src/imu_processing_task.c:377:6:imu_attitude_update	1

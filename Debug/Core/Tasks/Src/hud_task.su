@@ -1,0 +1,4 @@
+../Core/Tasks/Src/hud_task.c:34:6:hud_task	24	static
+../Core/Tasks/Src/hud_task.c:134:6:draw_spinspin	32	static
+../Core/Tasks/Src/hud_task.c:195:6:draw_gearing	32	static
+../Core/Tasks/Src/hud_task.c:252:6:clear_hud	24	static

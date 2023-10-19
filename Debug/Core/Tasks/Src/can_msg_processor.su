@@ -1,0 +1,5 @@
+../Core/Tasks/Src/can_msg_processor.c:29:6:can_ISR	56	static
+../Core/Tasks/Src/can_msg_processor.c:80:6:convert_raw_can_data	48	static,ignoring_inline_asm
+../Core/Tasks/Src/can_msg_processor.c:193:6:process_chassis_can_msg	16	static
+../Core/Tasks/Src/can_msg_processor.c:200:6:angle_offset	24	static
+../Core/Tasks/Src/can_msg_processor.c:230:6:motor_calc_odometry	40	static

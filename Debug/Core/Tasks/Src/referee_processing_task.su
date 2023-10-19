@@ -1,0 +1,2 @@
+../Core/Inc/arm_math.h:5745:30:arm_sqrt_f32	16	static
+../Core/Tasks/Src/referee_processing_task.c:48:6:referee_processing_task	312	static

@@ -1,0 +1,2 @@
+../Core/Tasks/Src/movement_control_task.c:27:6:movement_control_task	32	static
+../Core/Tasks/Src/movement_control_task.c:83:6:chassis_motion_control	168	static

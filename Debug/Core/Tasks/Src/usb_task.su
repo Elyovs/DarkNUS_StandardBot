@@ -1,0 +1,5 @@
+../Core/Tasks/Src/usb_task.c:38:6:usb_vcp_processing	280	static,ignoring_inline_asm
+../Core/Tasks/Src/usb_task.c:51:6:usb_clear_screen	16	static
+../Core/Tasks/Src/usb_task.c:56:13:return_variable_name	16	static
+../Core/Tasks/Src/usb_task.c:87:9:motor_config_mode	288	static
+../Core/Tasks/Src/usb_task.c:152:6:usb_task	16	static

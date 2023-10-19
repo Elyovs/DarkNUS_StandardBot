@@ -1,0 +1,6 @@
+CRC8_CRC16.c:93:9:get_CRC8_check_sum	2
+CRC8_CRC16.c:117:10:verify_CRC8_check_sum	3
+CRC8_CRC16.c:141:6:append_CRC8_check_sum	3
+CRC8_CRC16.c:167:10:get_CRC16_check_sum	3
+CRC8_CRC16.c:195:10:verify_CRC16_check_sum	5
+CRC8_CRC16.c:219:6:append_CRC16_check_sum	3

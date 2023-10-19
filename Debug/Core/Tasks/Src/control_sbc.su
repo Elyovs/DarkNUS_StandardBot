@@ -1,0 +1,9 @@
+../Core/Tasks/Src/control_sbc.c:42:6:sbc_control_input	8	static
+../Core/Tasks/Src/control_sbc.c:70:6:aimbot_pid_init	4	static
+../Core/Tasks/Src/control_sbc.c:86:6:sbc_gimbal_control_input	24	static
+../Core/Tasks/Src/control_sbc.c:125:6:sbc_gimbal_process_yolo	48	static
+../Core/Tasks/Src/control_sbc.c:147:6:sbc_gimbal_process_norm	40	static
+../Core/Tasks/Src/control_sbc.c:185:6:sbc_gimbal_process_set_ang	16	static
+../Core/Tasks/Src/control_sbc.c:197:6:sbc_gimbal_process_turn_ang	16	static
+../Core/Tasks/Src/control_sbc.c:212:6:sbc_chassis_control_input	32	static
+../Core/Tasks/Src/control_sbc.c:274:6:sbc_launcher_control_input	16	static

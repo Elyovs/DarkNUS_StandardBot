@@ -1,0 +1,8 @@
+../Core/Tasks/Src/motor_control.c:13:6:yaw_pid	2
+../Core/Tasks/Src/motor_control.c:44:6:yangle_pid	6
+../Core/Tasks/Src/motor_control.c:89:6:angle_pid	3
+../Core/Tasks/Src/motor_control.c:120:6:speed_pid	1
+../Core/Tasks/Src/motor_control.c:152:6:motor_send_can	15
+../Core/Tasks/Src/motor_control.c:278:6:kill_can	1
+../Core/Tasks/Src/motor_control.c:309:6:float_max	3
+../Core/Tasks/Src/motor_control.c:323:6:reset_pid	1

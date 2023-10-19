@@ -1,0 +1,4 @@
+../Core/Tasks/Src/control_keyboard.c:28:6:keyboard_control_input	8	static
+../Core/Tasks/Src/control_keyboard.c:34:6:keyboard_chassis_input	24	static
+../Core/Tasks/Src/control_keyboard.c:71:6:mouse_gimbal_input	16	static
+../Core/Tasks/Src/control_keyboard.c:84:6:mouse_launcher_control_input	4	static

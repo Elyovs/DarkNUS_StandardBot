@@ -1,0 +1,5 @@
+usb_task.c:38:6:usb_vcp_processing	2
+usb_task.c:51:6:usb_clear_screen	1
+usb_task.c:56:13:return_variable_name	11
+usb_task.c:87:9:motor_config_mode	8
+usb_task.c:152:6:usb_task	1

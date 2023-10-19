@@ -1,0 +1,8 @@
+bsp_usart.c:17:6:init_xvr_usart	1
+bsp_usart.c:21:6:xvr_half_cplt_isr	1
+bsp_usart.c:29:6:xvr_full_cplt_isr	1
+bsp_usart.c:33:19:xvr_usart_start	5
+bsp_usart.c:92:19:ref_usart_send	1
+bsp_usart.c:96:19:ref_usart_start	5
+bsp_usart.c:154:6:ref_half_cplt_isr	1
+bsp_usart.c:163:6:ref_full_cplt_isr	1

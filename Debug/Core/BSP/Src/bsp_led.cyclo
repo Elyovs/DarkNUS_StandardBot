@@ -1,0 +1,10 @@
+bsp_led.c:15:6:led_green_off	1
+bsp_led.c:19:6:led_green_on	1
+bsp_led.c:24:6:led_green_toggle	2
+bsp_led.c:35:6:led_red_off	1
+bsp_led.c:39:6:led_red_on	1
+bsp_led.c:43:6:led_red_toggle	2
+bsp_led.c:54:6:led_off	1
+bsp_led.c:60:6:led_on	1
+bsp_led.c:68:6:led_toggle	1
+bsp_led.c:71:6:status_led	11

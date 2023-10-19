@@ -1,0 +1,2 @@
+../Core/BSP/Src/bsp_dbus_input.c:18:6:dbus_remote_ISR	2
+../Core/BSP/Src/bsp_dbus_input.c:51:19:dbus_remote_start	6
