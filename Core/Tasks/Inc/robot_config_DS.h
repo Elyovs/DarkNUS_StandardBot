@@ -146,34 +146,34 @@
  */
 /*********************** GIMBAL CONFIGURATION ***********************/
 #define PITCH_ANGLE_KP	  		200
-#define PITCH_ANGLE_KD  		0
+#define PITCH_ANGLE_KD  		00
 #define PITCH_ANGLE_KI  		0
 #define PITCH_ANGLE_INT_MAX		1000
 
-#define PITCHRPM_KP				660 //480
-#define PITCHRPM_KI				0.083 //0.1
-#define PITCHRPM_KD				0.0203 //0.025
+#define PITCHRPM_KP				200
+#define PITCHRPM_KI				0.1
+#define PITCHRPM_KD				0
 #define PITCHRPM_INT_MAX		10000
 #define PITCH_MAX_RPM			200
 #define PITCH_MAX_CURRENT		20000
 
-#define PITCH_CENTER			2500
-#define PITCH_MAX_ANG			0.36
-#define PITCH_MIN_ANG			-0.5
+#define PITCH_CENTER			7900
+#define PITCH_MAX_ANG			0.6
+#define PITCH_MIN_ANG			-0.4
 
 #define YAW_ANGLE_KP			200//200
 #define YAW_ANGLE_KI			0
 #define YAW_ANGLE_KD			0
 #define YAW_ANGLE_INT_MAX		100
 
-#define YAWRPM_KP				1380//840//600//400
-#define YAWRPM_KI				0.125//0.125
-#define YAWRPM_KD				0.03125//0.03125
+#define YAWRPM_KP				100//600//400
+#define YAWRPM_KI				0.005
+#define YAWRPM_KD				100
 #define YAWRPM_INT_MAX			5000
 #define YAW_MAX_RPM				400
 #define YAW_MAX_CURRENT			20000
 
-#define YAW_CENTER 				1373
+#define YAW_CENTER 				4096
 #define YAW_MAX_ANG				(PI-0.75)
 #define YAW_MIN_ANG				(-PI+0.75)
 
@@ -182,25 +182,20 @@
 //ADD 4 TO GM6020 IDS i.e. flashing 5 times = ID 9
 //#define CHASSIS_MCU
 #ifndef CHASSIS_MCU
-#define USING_GM6020 		4
-#define USING_CAN2 			12
-
-#define FL_MOTOR_ID 		1
-#define FR_MOTOR_ID 		3
-#define BR_MOTOR_ID 		2
-#define BL_MOTOR_ID 		4
+#define FL_MOTOR_ID 		13
+#define FR_MOTOR_ID 		14
+#define BR_MOTOR_ID 		15
+#define BL_MOTOR_ID 		16
 #endif
-#define FEEDER_MOTOR_ID		7
-#define LFRICTION_MOTOR_ID	5
-#define RFRICTION_MOTOR_ID	6
+#define FEEDER_MOTOR_ID		3
+#define LFRICTION_MOTOR_ID	2
+#define RFRICTION_MOTOR_ID	1
 
 //NOTE: two motors CANNOT have the same __flashing__ number (i.e. GM6020 id 9 cannot be used
 //with any id 6 motors
-
-//Note: make sure that the pitch motor ID is larger than the yaw motor ID
-#define PITCH_MOTOR_ID 		1 + USING_GM6020 + USING_CAN2 //=17
+#define PITCH_MOTOR_ID 		17
 #ifndef CHASSIS_MCU
-#define YAW_MOTOR_ID 		2 + USING_GM6020 + USING_CAN2 //=18
+#define YAW_MOTOR_ID 		18
 #endif
 
 /* MECANUM WHEEL PROPERTIES */
@@ -210,33 +205,33 @@
 #define FR_ANG_Y 			-PI/2
 #define FR_ANG_PASSIVE		PI/4
 #define FR_DIST				312
-#define FR_VX_MULT			-1.0		//-cos(FR_ANG_Y - FR_ANG_PASSIVE)/sin(FR_ANG_PASSIVE)
-#define FR_VY_MULT			-1.0		//-sin(FR_ANG_Y - FR_ANG_PASSIVE)/sin(FR_ANG_PASSIVE)
-#define FR_YAW_MULT			1.0		//((-FR_DIST * sin(FR_ANG_Y - FR_ANG_PASSIVE - FR_ANG_X)) / (sin(FR_ANG_PASSIVE) * WHEEL_CIRC))
+#define FR_VX_MULT			-1		//-cos(FR_ANG_Y - FR_ANG_PASSIVE)/sin(FR_ANG_PASSIVE)
+#define FR_VY_MULT			-1		//-sin(FR_ANG_Y - FR_ANG_PASSIVE)/sin(FR_ANG_PASSIVE)
+#define FR_YAW_MULT			1		//((-FR_DIST * sin(FR_ANG_Y - FR_ANG_PASSIVE - FR_ANG_X)) / (sin(FR_ANG_PASSIVE) * WHEEL_CIRC))
 
 #define FL_ANG_X			PI/4
 #define FL_ANG_Y 			PI/2
 #define FL_ANG_PASSIVE		-PI/4
 #define FL_DIST				312
-#define FL_VX_MULT			-1.0 		//-cos(FL_ANG_Y - FL_ANG_PASSIVE)/sin(FL_ANG_PASSIVE)
-#define FL_VY_MULT			1.0		//-sin(FL_ANG_Y - FL_ANG_PASSIVE)/sin(FL_ANG_PASSIVE)
-#define FL_YAW_MULT			1.0	//((-FL_DIST * sin(FL_ANG_Y - FL_ANG_PASSIVE - FL_ANG_X)) / (sin(FL_ANG_PASSIVE) * WHEEL_CIRC))
+#define FL_VX_MULT			-1 		//-cos(FL_ANG_Y - FL_ANG_PASSIVE)/sin(FL_ANG_PASSIVE)
+#define FL_VY_MULT			1		//-sin(FL_ANG_Y - FL_ANG_PASSIVE)/sin(FL_ANG_PASSIVE)
+#define FL_YAW_MULT			1	//((-FL_DIST * sin(FL_ANG_Y - FL_ANG_PASSIVE - FL_ANG_X)) / (sin(FL_ANG_PASSIVE) * WHEEL_CIRC))
 
 #define BL_ANG_X			(3*PI/4)
 #define BL_ANG_Y 			PI/2
 #define BL_ANG_PASSIVE		PI/4
 #define BL_DIST				312
-#define BL_VX_MULT			1.0		//-cos(BL_ANG_Y - BL_ANG_PASSIVE)/sin(BL_ANG_PASSIVE)
-#define BL_VY_MULT			1.0		//-sin(BL_ANG_Y - BL_ANG_PASSIVE)/sin(BL_ANG_PASSIVE)
-#define BL_YAW_MULT			1.0	//((-BL_DIST * sin(BL_ANG_Y - BL_ANG_PASSIVE - BL_ANG_X)) / (sin(BL_ANG_PASSIVE) * WHEEL_CIRC))
+#define BL_VX_MULT			1		//-cos(BL_ANG_Y - BL_ANG_PASSIVE)/sin(BL_ANG_PASSIVE)
+#define BL_VY_MULT			1		//-sin(BL_ANG_Y - BL_ANG_PASSIVE)/sin(BL_ANG_PASSIVE)
+#define BL_YAW_MULT			1	//((-BL_DIST * sin(BL_ANG_Y - BL_ANG_PASSIVE - BL_ANG_X)) / (sin(BL_ANG_PASSIVE) * WHEEL_CIRC))
 
 #define BR_ANG_X			-(3*PI/4)
 #define BR_ANG_Y 			-PI/2
 #define BR_ANG_PASSIVE		-PI/4
 #define	BR_DIST				312
-#define BR_VX_MULT			1.0		//-cos(BR_ANG_Y - BR_ANG_PASSIVE)/sin(BR_ANG_PASSIVE)
-#define BR_VY_MULT			-1.0		//-sin(BR_ANG_Y - BR_ANG_PASSIVE)/sin(BR_ANG_PASSIVE)
-#define BR_YAW_MULT			1.0	//((-BR_DIST * sin(BR_ANG_Y - BR_ANG_PASSIVE - BR_ANG_X)) / (sin(BR_ANG_PASSIVE) * WHEEL_CIRC))
+#define BR_VX_MULT			1		//-cos(BR_ANG_Y - BR_ANG_PASSIVE)/sin(BR_ANG_PASSIVE)
+#define BR_VY_MULT			-1		//-sin(BR_ANG_Y - BR_ANG_PASSIVE)/sin(BR_ANG_PASSIVE)
+#define BR_YAW_MULT			1	//((-BR_DIST * sin(BR_ANG_Y - BR_ANG_PASSIVE - BR_ANG_X)) / (sin(BR_ANG_PASSIVE) * WHEEL_CIRC))
 
 /*********************** OTHERS ***********************/
 
