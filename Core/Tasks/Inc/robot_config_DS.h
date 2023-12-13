@@ -145,14 +145,14 @@
  * the motors
  */
 /*********************** GIMBAL CONFIGURATION ***********************/
-#define PITCH_ANGLE_KP	  		200
-#define PITCH_ANGLE_KD  		0
-#define PITCH_ANGLE_KI  		0
+#define PITCH_ANGLE_KP	  		700
+#define PITCH_ANGLE_KD  		2.2 / 6
+#define PITCH_ANGLE_KI  		1/6/6.3
 #define PITCH_ANGLE_INT_MAX		1000
 
-#define PITCHRPM_KP				660 //480
-#define PITCHRPM_KI				0.083 //0.1
-#define PITCHRPM_KD				0.0203 //0.025
+#define PITCHRPM_KP				500 //500 /2.2 //480
+#define PITCHRPM_KI				2.2 / 6 //0.1
+#define PITCHRPM_KD				1/6/6.3 //0.025
 #define PITCHRPM_INT_MAX		10000
 #define PITCH_MAX_RPM			200
 #define PITCH_MAX_CURRENT		20000
@@ -161,14 +161,14 @@
 #define PITCH_MAX_ANG			0.36
 #define PITCH_MIN_ANG			-0.5
 
-#define YAW_ANGLE_KP			200//200
-#define YAW_ANGLE_KI			0
-#define YAW_ANGLE_KD			0
+#define YAW_ANGLE_KP			400//1900 /2.2//200
+#define YAW_ANGLE_KI			2.2 * 0.2
+#define YAW_ANGLE_KD			0.2/6.3
 #define YAW_ANGLE_INT_MAX		100
 
-#define YAWRPM_KP				1380//840//600//400
-#define YAWRPM_KI				0.125//0.125
-#define YAWRPM_KD				0.03125//0.03125
+#define YAWRPM_KP				500//840//600//400
+#define YAWRPM_KI				2.2*0.1//0.125
+#define YAWRPM_KD				0.1/6,3//0.03125
 #define YAWRPM_INT_MAX			5000
 #define YAW_MAX_RPM				400
 #define YAW_MAX_CURRENT			20000
