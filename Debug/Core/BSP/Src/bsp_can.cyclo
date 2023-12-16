@@ -1,5 +1,5 @@
-bsp_can.c:19:6:HAL_CAN_RxFifo0MsgPendingCallback	1
-bsp_can.c:22:6:HAL_CAN_RxFifo1MsgPendingCallback	1
-bsp_can.c:26:19:can1_get_msg	1
-bsp_can.c:32:19:can2_get_msg	1
-bsp_can.c:47:6:can_start	3
+../Core/BSP/Src/bsp_can.c:19:6:HAL_CAN_RxFifo0MsgPendingCallback	1
+../Core/BSP/Src/bsp_can.c:22:6:HAL_CAN_RxFifo1MsgPendingCallback	1
+../Core/BSP/Src/bsp_can.c:26:19:can1_get_msg	1
+../Core/BSP/Src/bsp_can.c:32:19:can2_get_msg	1
+../Core/BSP/Src/bsp_can.c:47:6:can_start	3

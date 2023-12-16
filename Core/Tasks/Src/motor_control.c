@@ -284,19 +284,18 @@ void kill_can() {
 	CAN_tx_message.RTR = CAN_RTR_DATA;
 	CAN_tx_message.DLC = 0x08;
 //
-//	CAN_tx_message.StdId = 0x200;
-//	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
-//	CAN_tx_message.StdId = 0x1FF;
-//	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
-//	CAN_tx_message.StdId = 0x2FF;
-//	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
-//	CAN_tx_message.StdId = 0x200;
-//#ifndef CHASSIS_MCU
-//	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
-//	CAN_tx_message.StdId = 0x1FF;
-//	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
-//	CAN_tx_message.StdId = 0x2FF;
-//	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x200;
+	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x1FF;
+	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x2FF;
+	HAL_CAN_AddTxMessage(&hcan1, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x200;
+	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x1FF;
+	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
+	CAN_tx_message.StdId = 0x2FF;
+	HAL_CAN_AddTxMessage(&hcan2, &CAN_tx_message, CAN_send_data, &send_mail_box);
 //
 //#endif
 }

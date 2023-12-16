@@ -41,8 +41,8 @@ void remote_chassis_input() {
 
 			forward_input = (float) remote_cmd.left_y / RC_LIMITS;
 			horizontal_input = (float) remote_cmd.left_x / RC_LIMITS;
-//			yaw_input = chassis_center_yaw();
-yaw_input = (float) remote_cmd.right_x * CHASSIS_YAW_MAX_RPM /RC_LIMITS;
+			yaw_input = chassis_center_yaw();
+//yaw_input = (float) remote_cmd.right_x * CHASSIS_YAW_MAX_RPM /RC_LIMITS;
 			chassis_set_ctrl(forward_input, horizontal_input, yaw_input);
 	}
 }

@@ -70,8 +70,7 @@ void movement_control_task(void *argument) {
 			can_motors[FL_MOTOR_ID - 1].rpm_pid.output = 0;
 			can_motors[BL_MOTOR_ID - 1].rpm_pid.output = 0;
 			can_motors[BR_MOTOR_ID - 1].rpm_pid.output = 0;
-			motor_send_can(can_motors, FR_MOTOR_ID, FL_MOTOR_ID, BL_MOTOR_ID,
-			BR_MOTOR_ID);
+//			motor_send_can(can_motors, FR_MOTOR_ID, FL_MOTOR_ID, BL_MOTOR_ID,BR_MOTOR_ID);
 		}
 		//clear bits if it's not already cleared
 		xEventGroupClearBits(chassis_event_group, 0b1111);
@@ -86,7 +85,7 @@ void chassis_motion_control(motor_data_t *motorfr, motor_data_t *motorfl,
 	static uint32_t prev_time;
 	//get the angle between the gun and the chassis
 	//so that movement is relative to gun, not chassis
-	float rel_angle = can_motors[YAW_MOTOR_ID - 1].angle_data.adj_ang;
+	double rel_angle = can_motors[YAW_MOTOR_ID - 1].angle_data.adj_ang;
 	float translation_rpm[4] = { 0, };
 	float yaw_rpm[4] = { 0, };
 	float total_power = 0;
@@ -107,8 +106,8 @@ void chassis_motion_control(motor_data_t *motorfr, motor_data_t *motorfl,
 	//rotate angle of the movement :)
 	//MA1513/MA1508E is useful!!
 
-	float rel_forward = ((-chassis_ctrl_data.forward * sin(-rel_angle))
-			+ (chassis_ctrl_data.horizontal * cos(-rel_angle)));
+	float rel_forward = ((-chassis_ctrl_data.horizontal * sin(-rel_angle))
+			+ (chassis_ctrl_data.forward * cos(-rel_angle)));
 	float rel_horizontal = ((-chassis_ctrl_data.horizontal * cos(-rel_angle))
 			+ (chassis_ctrl_data.forward * -sin(-rel_angle)));
 	float rel_yaw = chassis_ctrl_data.yaw;

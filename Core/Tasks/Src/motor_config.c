@@ -237,7 +237,7 @@ void config_motors() {
 
 void bz_buzzer(uint8_t high, uint8_t low) {
 	uint8_t temp_msg = bz_debug_high;
-	for (uint i = 0; i < high; i++) {
+	for (uint8_t i = 0; i < high; i++) {
 		xQueueSendToBack(buzzing_task_msg, &temp_msg, 0);
 	}
 	temp_msg = bz_debug_low;

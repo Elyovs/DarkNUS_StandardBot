@@ -44,7 +44,7 @@ void gimbal_control_task(void *argument) {
 		} else {
 			can_motors[PITCH_MOTOR_ID - 1].rpm_pid.output = 0;
 			can_motors[YAW_MOTOR_ID - 1].rpm_pid.output = 0;
-			motor_send_can(can_motors, PITCH_MOTOR_ID, YAW_MOTOR_ID, 0, 0);
+//			motor_send_can(can_motors, PITCH_MOTOR_ID, YAW_MOTOR_ID, 0, 0);
 		}
 		status_led(2, off_led);
 		xEventGroupClearBits(gimbal_event_group, 0b11);
