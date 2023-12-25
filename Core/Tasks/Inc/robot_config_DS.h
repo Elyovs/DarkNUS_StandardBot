@@ -36,19 +36,19 @@
 #define FRICTION_SB_SPIN		1000
 #define OVERHEAT_TIME			100
 
-#define LV1_FEEDER				480
+#define LV1_FEEDER				7500//480
 #define	LV1_PROJECTILE			13.7//`b0//18//20//12
 #define LV1_POWER				60
 #define LV1_MAX_SPEED			4500
 #define LV1_MAX_CURRENT			4000
 
-#define LV2_FEEDER				480
+#define LV2_FEEDER				7500//480
 #define	LV2_PROJECTILE			13.7//12
 #define LV2_POWER				80
 #define LV2_MAX_SPEED			6000
 #define LV2_MAX_CURRENT			5000
 
-#define LV3_FEEDER				480
+#define LV3_FEEDER				7500//480
 #define	LV3_PROJECTILE			13.7//12
 #define LV3_POWER				100
 #define LV3_MAX_SPEED			8000
@@ -59,7 +59,7 @@
 //todo: implement power settings lol
 //#define MOTOR_CURRENT_RATIO		(CHASSIS_MAX_CURRENT / 10000) 	// 10000 mA at max current
 #define PROJECTILE_SPEED_RATIO	360								//rpm per m/s of the friction wheels ish don't think this will work well lmao
-#define FEEDER_SPEED_RATIO		8								//projectiles per round of the feeder
+#define FEEDER_SPEED_RATIO		15								//projectiles per round of the feeder
 
 /*********************** MANUAL CONTROL CONFIGURATION *******************/
 //Inverts for both keyboard and mouse controls
@@ -94,16 +94,16 @@
 /*********************** LAUNCHER CONFIGURATION ***********************/
 #define FEEDER_KP 			7			// |
 #define FEEDER_KI  			0.02				// | - FEEDER PID VALUES
-#define FEEDER_KD  			3			// |
+#define FEEDER_KD  			0.03			// |
 #define FEEDER_MAX_INT		10000
 
 #define FEEDER_ANGLE_KP 			1			// |
 #define FEEDER_ANGLE_KD  			0			// | - FEEDER_ANGLE PID VALUES
 #define FEEDER_ANGLE_KI  			0			// |
 #define FEEDER_ANGLE_INT_MAX  		0			// |
-#define FEEDER_MAX_RPM				100			// |
+#define FEEDER_MAX_RPM				800			// |
 #define FEEDER_JAM_TORQUE  		9800			//Before feeder deemed to be jammed
-#define FEEDER_UNJAM_SPD  		-60				//Reverse unjam
+#define FEEDER_UNJAM_SPD  		-200				//Reverse unjam
 #define FEEDER_UNJAM_TIME		110
 #define FEEDER_MAX_CURRENT		10000
 #define FEEDER_INVERT			1
@@ -114,7 +114,7 @@
 #define FRICTION_KD  			0//10				// |
 #define FRICTION_MAX_CURRENT 	16384
 #define FRICTION_MAX_INT		10000
-#define FRICTION_INVERT			-1
+#define FRICTION_INVERT			1
 #define LAUNCHER_MARGIN			100
 #define LAUNCHER_DIFF_MARGIN	100
 #define FRICTION_OFFSET			100

@@ -70,8 +70,8 @@ all: main-build
 main-build: standard_bot_v5clean.elf secondary-outputs
 
 # Tool invocations
-standard_bot_v5clean.elf standard_bot_v5clean.map: $(OBJS) $(USER_OBJS) C:\Users\Edward\ Tay\Desktop\Elec&Code\standard_bot_v5clean\STM32F407IGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "standard_bot_v5clean.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Edward Tay\Desktop\Elec&Code\standard_bot_v5clean\STM32F407IGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="standard_bot_v5clean.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+standard_bot_v5clean.elf standard_bot_v5clean.map: $(OBJS) $(USER_OBJS) C:\Users\lutfi\OneDrive\Desktop\NUS\RoboMaster\Mark\ 2\ bot\ code\ (NEW)\STM32F407IGHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "standard_bot_v5clean.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lutfi\OneDrive\Desktop\NUS\RoboMaster\Mark 2 bot code (NEW)\STM32F407IGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="standard_bot_v5clean.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
